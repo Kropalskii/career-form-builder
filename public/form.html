@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Career Forms — Отклик</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/form.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <div class="brand">Career<span>Forms</span></div>
+    <span class="header-label">Форма отклика</span>
+  </header>
+
+  <main class="container" style="max-width:720px">
+    <section class="panel">
+      <div id="loading">Загрузка формы...</div>
+
+      <div id="formContent" hidden>
+        <p class="eyebrow">APPLICATION FORM</p>
+        <h1 id="studentFormTitle"></h1>
+        <p id="studentFormDescription" class="subtitle"></p>
+
+        <form id="studentForm">
+          <div id="studentQuestions"></div>
+
+          <div class="actions">
+            <button class="primary-button" type="submit" id="submitButton">
+              Отправить заявку
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div id="successMessage" hidden>
+        <h1>Заявка отправлена!</h1>
+        <p class="subtitle">Ваши ответы успешно сохранены.</p>
+      </div>
+
+      <p id="formError" style="color:#d24b59" hidden></p>
+    </section>
+  </main>
+</body>
+</html>

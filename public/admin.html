@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Career Forms — Admin</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/admin.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <div class="brand">Career<span>Forms</span></div>
+    <span class="header-label">Панель управления</span>
+  </header>
+
+  <main class="container">
+    <div class="page-heading">
+      <div>
+        <p class="eyebrow">WORKSPACE / FORMS</p>
+        <h1>Конструктор форм</h1>
+        <p class="subtitle">Создавайте формы отклика для студентов.</p>
+      </div>
+    </div>
+
+    <div class="layout">
+      <section class="panel">
+        <h2>Основная информация</h2>
+
+        <label for="formTitle">Название формы *</label>
+        <input id="formTitle" maxlength="120"
+          placeholder="Например: Стажировка Frontend Developer">
+
+        <label for="formDescription">Описание</label>
+        <textarea id="formDescription" rows="3"
+          placeholder="Расскажите студентам о возможности"></textarea>
+
+        <div class="section-heading">
+          <h2>Вопросы</h2>
+          <span id="questionCount">0 вопросов</span>
+        </div>
+
+        <div id="questions"></div>
+
+        <button type="button" class="add-button" id="addQuestion">
+          + Добавить вопрос
+        </button>
+
+        <div class="actions">
+          <button type="button" class="primary-button" id="publishForm">
+            Опубликовать форму
+          </button>
+        </div>
+
+        <div id="publishResult" class="publish-result" hidden></div>
+      </section>
+
+      <aside class="panel preview-panel">
+        <div class="preview-heading">
+          <h2>Предпросмотр</h2>
+          <span class="preview-tag">LIVE PREVIEW</span>
+        </div>
+        <div id="preview"></div>
+      </aside>
+    </div>
+    
+<section class="panel forms-section">
+  <div class="section-heading">
+    <div>
+      <h2>Созданные формы</h2>
+      <p class="subtitle">Управляйте опубликованными формами и заявками.</p>
+    </div>
+    <button class="refresh-button" id="refreshForms" type="button">
+      Обновить
+    </button>
+  </div>
+
+  <div id="formsList">
+    <p class="subtitle">Загрузка форм...</p>
+  </div>
+</section>
+
+<section class="panel forms-section" id="responsesSection" hidden>
+  <div class="section-heading">
+    <div>
+      <h2 id="responsesTitle">Ответы студентов</h2>
+      <p class="subtitle" id="responsesCount"></p>
+    </div>
+    <button class="refresh-button" id="closeResponses" type="button">
+      Закрыть
+    </button>
+  </div>
+
+  <div id="responsesList"></div>
+</section>
+
+  </main>
+</body>
+</html>
